@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #e0e0e0, #cfd8dc);
+}
+
+.calculadora {
+    background: #f0f0f0; /* Cambiado a un color gris claro */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 15px;
+    border: 2px solid black; /* Borde negro */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 500px; /* Ancho de la calculadora */
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Orientar en columna */
+    align-items: center; /* Centrar elementos hijos */
+    margin: 20px; /* Margen externo */
+}
+
+#pantalla {
+    font-size: 32px; /* Tamaño de fuente */
+    padding: 15px; /* Espaciado interno */
+    margin: 0 auto 20px; /* Centrar horizontalmente y margen inferior */
+    width: 90%; /* Ancho del 90% para que se ajuste bien */
+    text-align: right; /* Alineación a la derecha */
+    border: 2px solid #4CAF50; /* Borde verde */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #e8f5e9; /* Fondo claro */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border-color 0.3s; /* Transición suave del borde */
+}
+
+#pantalla:focus {
+    outline: none; /* Quitar contorno por defecto */
+    border-color: #81c784; /* Cambiar el color del borde al enfocar */
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas uniformes */
+    gap: 15px; /* Espacio entre botones */
+}
+
+button {
+    padding: 20px; /* Espaciado de botones */
+    font-size: 20px; /* Tamaño de fuente de botones */
+    border: 2px solid black; /* Borde negro para los botones */
+    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados en botones */
+    background-color: #4CAF50; /* Color de fondo de botones */
+    color: white; /* Color del texto */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto de transición */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra de botones */
+}
+
+button:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Aumento ligero al pasar el mouse */
+}
+
+button:active {
+    transform: scale(0.95); /* Disminución ligera al hacer clic */
+}
+
+button:nth-child(4n) {
+    background-color: #ff9800; /* Color de botones de división y multiplicación */
+}
+
+button:nth-child(4n):hover {
+    background-color: #fb8c00; /* Color al pasar el mouse */
+}
+
+button:nth-last-child(-n+3) {
+    background-color: #f44336; /* Color de botones de raíz y borrar */
+}
+
+button:nth-last-child(-n+3):hover {
+    background-color: #e53935; /* Color al pasar el mouse */
+}
+
+button:nth-last-child(1) {
+    background-color: #f44336; /* Color rojo para el botón "C" */
+}
+
+button:nth-last-child(2) {
+    background-color: #4CAF50; /* Color verde para el botón "x²" */
+}
+
+button:nth-last-child(3) {
+    background-color: #4CAF50; /* Color verde para el botón "x^y" */
+}
+
+button:nth-last-child(4) {
+    background-color: #f44336; /* Color rojo para el botón de borrar (⌫) */
+}
+
+button:nth-last-child(5) {
+    background-color: #f44336; /* Color rojo para el botón de borrarÚltimo */
+}
+
+button:nth-last-child(6) {
+    background-color: #4CAF50; /* Color verde para el botón "cos" */
+}
+
+.footer {
+    margin-top: 20px; /* Espacio entre botones y el pie */
+    font-size: 14px; /* Tamaño de fuente del pie */
+    color: #777; /* Color del texto del pie */
+}
